@@ -1,0 +1,38 @@
+/* Basic layout and sidebar styles */
+body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background:#f4f6f8; color:#333 }
+.app-container { display:flex; min-height:100vh; margin-top:60px }
+.sidebar { width:220px; background:#1f2937; color:#fff; padding:20px 12px; box-sizing:border-box }
+.sidebar h2 { font-size:18px; margin:0 0 12px 0 }
+.nav { list-style:none; padding:0; margin:0 }
+.nav li { margin:6px 0 }
+.nav a { color:#cbd5e1; text-decoration:none; display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:4px }
+.nav a:hover { background:#111827; color:#fff }
+.nav a .icon { display:inline-flex; width:18px; height:18px; align-items:center; justify-content:center; color:inherit }
+.nav a svg { display:block; width:18px; height:18px }
+.nav a .label { display:inline-block }
+.content { flex:1; padding:28px }
+.toggle-sidebar-btn { background:#0b74de;border:0;color:#fff;font-size:18px;padding:6px 10px;cursor:pointer;margin-left:8px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center }
+.toggle-sidebar-btn:focus{outline:none}
+.toggle-sidebar-btn:hover{background:#095fb2}
+
+/* Hamburger (three bars) inside the toggle button */
+.hamburger{display:inline-block;width:20px;height:14px;position:relative}
+.hamburger span{position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px;display:block}
+.hamburger span:nth-child(1){top:0}
+.hamburger span:nth-child(2){top:6px}
+.hamburger span:nth-child(3){top:12px}
+
+/* Collapsed sidebar styles */
+.app-container.collapsed .sidebar { width:60px }
+.app-container.collapsed .sidebar h2 { display:none }
+.app-container.collapsed .sidebar .nav a { padding-left:0; text-align:center; justify-content:center }
+.app-container.collapsed .sidebar .nav a .icon { margin-right:0 }
+.app-container.collapsed .sidebar .nav a .label { display:none }
+.app-container.collapsed .content { padding-left:20px }
+.navbar { position:fixed; top:0; left:0; right:0; height:60px; background:#ffffff; border-bottom:1px solid #e5e7eb; display:flex; align-items:center; justify-content:space-between; padding:0 16px; box-sizing:border-box; z-index:1000 }
+.navbar .brand { font-weight:700; color:#111827; text-decoration:none }
+.navbar .nav a { color:#374151; text-decoration:none; padding:8px 10px; border-radius:4px }
+.navbar .nav a:hover { background:#f3f4f6 }
+
+.card { max-width:900px; background:#fff; padding:24px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06) }
+.btn { display:inline-block; padding:8px 12px; background:#2a7ae2; color:#fff; border-radius:4px; text-decoration:none }
